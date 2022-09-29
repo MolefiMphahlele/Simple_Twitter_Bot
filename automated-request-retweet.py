@@ -3,10 +3,8 @@ import tweepy
 import WebQueries
 import mysql.connector
 
-KEYS_FILE = "/home/molefi/Documents/negligible/keys.txt"
-DB ="/home/molefi/Documents/negligible/LocalDataBase.txt" 
 
-AllKeys = open(KEYS_FILE, "r").read().splitlines()
+AllKeys = open("Twitter Api keys", "r").read().splitlines()
 APIkey = AllKeys[1]
 APISecretKey = AllKeys[3]
 BearerToken = AllKeys[5]
@@ -18,7 +16,7 @@ TWEET_CLIENT = tweepy.Client(consumer_key= APIkey,
     access_token= AccessToken,
     access_token_secret= SecretAccessToken)
 
-DB_credentials = open(DB, "r").read().splitlines()
+DB_credentials = open("database credentials", "r").read().splitlines()
 DB_connection = mysql.connector.connect(
     user = DB_credentials[3], 
     database = DB_credentials[1], 
