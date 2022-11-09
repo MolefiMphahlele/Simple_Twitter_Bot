@@ -1,2 +1,3 @@
-# retrieves word of the day from online dictionaries and post to twitter
-# search recent tweets for tweets containig the particualr word of the day
+# the script scrapes information regarding word of the day from Merriam-Webster, Urban Dicctionary and Dictionary.com 
+# then retweets them. Additionally the script searches recent tweets to gauge the popularity of the words
+
